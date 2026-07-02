@@ -1,0 +1,3 @@
+# frontend-specific; everything else is covered by the root .gitignore
+dist-ssr
+*.local
