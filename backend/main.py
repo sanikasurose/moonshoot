@@ -7,10 +7,9 @@ from api.routes.auth import router as auth_router
 app = FastAPI(title="Moonshoot")
 
 app.add_middleware(JWTAuthMiddleware)
-# ponytail: allow all origins; tighten to the Vercel domain at deploy time
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["https://moonshoot-gamma.vercel.app", "http://localhost:5173"],
     allow_methods=["*"],
     allow_headers=["*"],
 )
